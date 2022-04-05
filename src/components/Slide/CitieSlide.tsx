@@ -1,4 +1,4 @@
-import { Flex, Image, Stack, Text } from '@chakra-ui/react';
+import { Flex, Image, Link, Stack, Text } from '@chakra-ui/react';
 import { SwiperSlide } from 'swiper/react'
 import { ImageProps } from '@chakra-ui/react';
 
@@ -10,6 +10,7 @@ interface CitieSlideProps extends ImageProps {
 
 export default function CitieSlide( {image, title, subtitle, ...rest }: CitieSlideProps ){
   return(
+    <Link href={`http://localhost:3000/continent/${title}`}>
       <Flex align='center' justify='center'>
         <Image
           w='100vw'
@@ -37,5 +38,6 @@ export default function CitieSlide( {image, title, subtitle, ...rest }: CitieSli
           >{subtitle}</Text>
         </Stack>
       </Flex>
+    </Link>
   );
 }
