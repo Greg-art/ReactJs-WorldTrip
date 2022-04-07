@@ -1,0 +1,127 @@
+{
+  "id": "38aa7b81-ef2c-4569-9b98-e3a2e409badc",
+  "uid": "voluptate-molestias-alias",
+  "type": "continent",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Streamline real-time experiences",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Cillum qui elit Lorem minim veniam laboris dolore officia minim adipisicing consectetur elit occaecat. Magna enim non laborum et consectetur ullamco proident adipisicing amet non do laboris commodo. Laborum mollit et deserunt sunt consectetur deserunt.",
+        "spans": []
+      }
+    ],
+    "countries": 5,
+    "languages": 5,
+    "citie": [
+      {
+        "banner": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&h=500&fit=crop"
+        },
+        "citieName": [
+          {
+            "type": "paragraph",
+            "text": "Nostrud deserunt sint elit mollit sunt.",
+            "spans": []
+          }
+        ],
+        "citieCountry": [
+          {
+            "type": "paragraph",
+            "text": "Ea cillum voluptate commodo adipisicing.",
+            "spans": []
+          }
+        ],
+        "countryFlag": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "banner": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&h=500&fit=crop"
+        },
+        "citieName": [
+          {
+            "type": "paragraph",
+            "text": "Minim excepteur fugiat quis incididunt excepteur consequat quis quis labore est consectetur veniam consectetur ipsum eu.",
+            "spans": []
+          }
+        ],
+        "citieCountry": [
+          {
+            "type": "paragraph",
+            "text": "Ad sunt consectetur excepteur labore culpa veniam irure exercitation. Eiusmod aliquip velit excepteur sunt magna enim proident mollit ipsum.",
+            "spans": []
+          }
+        ],
+        "countryFlag": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=900&h=500&fit=crop"
+        }
+      },
+      {
+        "banner": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&h=500&fit=crop"
+        },
+        "citieName": [
+          {
+            "type": "paragraph",
+            "text": "Occaecat Lorem eu laboris minim ad nulla aute exercitation culpa pariatur.",
+            "spans": []
+          }
+        ],
+        "citieCountry": [
+          {
+            "type": "paragraph",
+            "text": "Amet fugiat proident laboris occaecat reprehenderit aliqua sint cillum enim anim.",
+            "spans": []
+          }
+        ],
+        "countryFlag": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=900&h=500&fit=crop"
+        }
+      }
+    ]
+  }
+}

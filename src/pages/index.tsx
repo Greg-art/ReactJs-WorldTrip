@@ -3,21 +3,7 @@ import Header from '../components/Header'
 import Banner from '../components/Banner'
 import Cards from '../components/Cards/Index'
 import Slide from '../components/Slide/Index'
-import { createServer } from "miragejs"
 
-createServer({
-  routes() {
-    this.get("/api/continents", () => ({
-      continents: [
-        {id: 1, name:"Europa", países:50, image:"London.jpg"},
-        {id: 2, name:"América", países:36, image:"san-diego.jpg"},
-        {id: 3, name:"áfrica", países:54, image:"Marimba.jpg"},
-        {id: 4, name:"Oceania", países:14, image:"Marimba.jpg"},
-        {id: 5, name:"Ásia", países:49, image:"Tokio.jpg"},
-      ]
-    }))
-  }
-})
 
 export default function Home() {
   return (

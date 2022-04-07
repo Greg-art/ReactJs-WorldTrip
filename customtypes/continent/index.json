@@ -1,0 +1,92 @@
+{
+  "id": "continent",
+  "label": "continent",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "title": {
+        "config": {
+          "label": "Title",
+          "placeholder": "Continent's name",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        },
+        "type": "StructuredText"
+      },
+      "description": {
+        "config": {
+          "label": "Description",
+          "placeholder": "Description of the continent",
+          "allowTargetBlank": true,
+          "single": "paragraph,strong"
+        },
+        "type": "StructuredText"
+      },
+      "countries": {
+        "config": {
+          "label": "Countries",
+          "placeholder": "amount"
+        },
+        "type": "Number"
+      },
+      "languages": {
+        "config": {
+          "label": "Languages",
+          "placeholder": "amount"
+        },
+        "type": "Number"
+      },
+      "citie": {
+        "config": {
+          "label": "Citie",
+          "placeholder": "",
+          "fields": {
+            "banner": {
+              "config": {
+                "label": "Banner",
+                "constraint": {},
+                "thumbnails": []
+              },
+              "type": "Image"
+            },
+            "citieName": {
+              "config": {
+                "label": "Citie Name",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph"
+              },
+              "type": "StructuredText"
+            },
+            "citieCountry": {
+              "config": {
+                "label": "Citie Country",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph"
+              },
+              "type": "StructuredText"
+            },
+            "countryFlag": {
+              "config": {
+                "label": "Country Flag",
+                "constraint": {},
+                "thumbnails": []
+              },
+              "type": "Image"
+            }
+          }
+        },
+        "type": "Group"
+      }
+    }
+  }
+}
