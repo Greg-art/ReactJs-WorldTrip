@@ -7,20 +7,3 @@ export default function Continent({name}) {
    );
 }
   
-export const getStaticPaths = () => {
-  return {
-    paths: [],
-    fallback: 'blocking'
-  }
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { name } = params;
-
-  return {
-    props: {
-      name, 
-    },
-    revalidate: 60 * 30,  // 30 minute 
-  }
-}
