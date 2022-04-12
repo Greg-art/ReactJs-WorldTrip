@@ -44,10 +44,16 @@
         },
         "type": "Number"
       },
+      "cities": {
+        "type": "Number",
+        "config": {
+          "label": "Cities",
+          "placeholder": "Amount"
+        }
+      },
       "citie": {
         "config": {
           "label": "Citie",
-          "placeholder": "",
           "fields": {
             "banner": {
               "config": {

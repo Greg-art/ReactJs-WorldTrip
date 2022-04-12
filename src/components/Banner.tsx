@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Text, Flex, Heading, Image, Stack } from "@chakra-ui/react";
+import { Text, Flex, Heading, Image, Stack } from "@chakra-ui/react";
 
 export default function Banner() {
   return(

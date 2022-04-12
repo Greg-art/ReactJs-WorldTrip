@@ -10,7 +10,7 @@ const theme = extendTheme({
     gray:{
       '800': '#47585B',
     },
-    white:{
+    white:{      
       '50': '#F5F8FA',
       '500': '#DADADA',
     },
@@ -21,7 +21,7 @@ const theme = extendTheme({
   styles:{
     global:{
       body:{
-        bg:'gray.800',
+        bg:'white.50',
         color:'gray.800',
         FontFace:'Poppins' 
       }

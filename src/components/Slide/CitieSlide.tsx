@@ -3,14 +3,15 @@ import { SwiperSlide } from 'swiper/react'
 import { ImageProps } from '@chakra-ui/react';
 
 interface CitieSlideProps extends ImageProps {
-  image: string,
+  slug: string
   title?: string,
   subtitle?: string,
+  image: string,
 }
 
-export default function CitieSlide( {image, title, subtitle, ...rest }: CitieSlideProps ){
+export default function CitieSlide( { slug, image, title, subtitle, ...rest }: CitieSlideProps ){
   return(
-    <Link href={`http://localhost:3000/continent/${title}`}>
+    <Link href={`http://localhost:3000/continent/${slug}`}>
       <Flex align='center' justify='center'>
         <Image
           w='100vw'

@@ -10,24 +10,36 @@ import { Pagination, Navigation } from "swiper";
 import { useState } from 'react';
 
 
-export default function Slide(){
-  const [continents, setContinents] = useState([])
+interface SlideProps{
+  continents:{
+    slug: string;
+    title: string;
+    subtitle: string;
+    image: string;
+  }[]
+}
 
+export default function Slide( { continents }: SlideProps ){
+
+  console.log(continents)
 
   return(
     <Flex justify='center' w='100vw' my='40px'>
       <Flex maxW='1240px' h='450px'>
         <Swiper navigation={true} pagination={true} modules={[Pagination, Navigation]}>
-          <a key={1} href={`http://localhost:3000/continent/1`}> 
-            <SwiperSlide >
-              <CitieSlide image='/images/cities/London.jpg' title='Europa' subtitle='A cidade mais antiga.'/>
-            </SwiperSlide >
-          </a>   
-          <a key={2} href={`http://localhost:3000/continent/1`}> 
-            <SwiperSlide >
-              <CitieSlide image={`./images/cities/London.jpg`} title='Europa' subtitle='A cidade mais antiga.'/>
-            </SwiperSlide >
-          </a>             
+
+          {continents.map(continent => (
+              // <a key={continent.slug} href={`http://localhost:3000/continent/${continent.slug}`}> 
+                <SwiperSlide key={continent.slug}>
+                  <CitieSlide
+                    slug={continent.slug}
+                    image={continent.image}
+                    title={continent.title}
+                    subtitle={continent.subtitle} />
+                </SwiperSlide >
+              // </a>   
+          ))}
+
         </Swiper>
       </Flex>
     </Flex> 
