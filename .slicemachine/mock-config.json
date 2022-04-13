@@ -38,6 +38,12 @@
       },
       "languages": {
         "content": 5
+      },
+      "subtitle": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
       }
     }
   }

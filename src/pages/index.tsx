@@ -45,7 +45,7 @@ export async function getStaticProps({ previewData }){
     return{
       slug: continent.uid,
       title: continent.data.title[0].text,
-      subtitle: 'oi',
+      subtitle: continent.data.subtitle[0].text,
       image: continent.data.citie[0].banner.url
     }
 

@@ -15,9 +15,9 @@ export default function Citie({ name, country, banner, flag}: CitieProps){
       w='256px'
       h='279px'
       bg='white'
-      py='10'
       spacing='0px'
       borderRadius='4px'  
+      mt='10'
     >
       <Image
         fit='cover'

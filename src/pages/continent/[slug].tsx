@@ -30,6 +30,7 @@ export default function Continent({continent}: ContinentProps) {
       bg='white.50'
       w='100%'
       align='center'
+      mb='100px'
     >
       <Header />
       <BannerContinent title={continent.title}/>
