@@ -36,12 +36,12 @@
 ## ⚙️ Instalação
 ```
 # Abra um terminal e copie este repositório com o comando
-$ git clone https://github.com/Greg-art/ReactJs-WorldTrip.git
+$ git clone https://github.com/Greg-art/WorldTrip.git
 ```
 
 ```
 # Acesse a pasta da aplicação
-$ cd ReactJs-WorldTrip
+$ cd WorldTrip
 
 # Crie um arquivo .env.local e coloque as variaveis
 # de ambiente baseado no arquivo .env.example que
