@@ -17,12 +17,13 @@ export default function Citie({ name, country, banner, flag}: CitieProps){
       bg='white'
       spacing='0px'
       borderRadius='4px'  
-      mt='10'
+      mt='5'
+      mb='5'
     >
       <Image
         fit='cover'
         src={banner}
-        width='100%'
+        w='100%'
         h='173px' 
         borderRadius='4px 4px 0px 0px'   
         

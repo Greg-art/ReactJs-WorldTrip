@@ -12,13 +12,12 @@ interface TopCitiesProps{
 
 export default function TopCities( { cities }: TopCitiesProps) {
 
-  console.log(cities)
   return(
     <>
-      <Heading>Cidades +100</Heading>
-      <Wrap>
+      <Heading fontSize={{base:'2xl' ,lg: '3xl'}} pb={{lg:'10px'}}>Cidades +100</Heading>
+      <Wrap justify='center'>
         {cities.map(citie => (   
-          <WrapItem pr='28px'>
+          <WrapItem pr={{base:'0px',sm:'12px',lg:'28px'}}>
             <Citie 
               name={citie.name}
               country={citie.country}

@@ -4,6 +4,7 @@ import theme from '../styles/theme'
 import { PrismicPreview } from '@prismicio/next'
 // import { repositoryName } from '../services/prismicio'
 
+import '../styles/slider.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

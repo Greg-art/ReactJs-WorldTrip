@@ -1,4 +1,4 @@
-import { Stack, Text, Image } from "@chakra-ui/react";
+import { Stack, Text, Image, useBreakpointValue, Box } from "@chakra-ui/react";
 
 interface CardProps{
   image: string
@@ -6,10 +6,26 @@ interface CardProps{
 }
 
 export default function Card({ image, text }: CardProps){
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  })
+
+  if(isWideVersion){
+    return(
+      <Stack spacing='8' justify='center' align='center'>
+        <Image src={image} w={['40px','85px']} h={['40px','85px']}/>  &&
+        <Text fontSize={['md','lg']} fontWeight='bold' >{text}</Text>
+      </Stack>    
+    )
+  }
+
   return(
-    <Stack spacing='8' justify='center' align='center'>
-      <Image src={image} w='85px' h='85px'/>
-      <Text fontSize='lg' fontWeight='bold' >{text}</Text>
-    </Stack>    
+    <Stack direction='row' spacing='2' justify='center' align='center'>
+      <Box w='10px' h='10px' bg='yellow.500' borderRadius='360'></Box>
+      <Text fontSize={['md','lg']} fontWeight='bold' >{text}</Text>
+    </Stack>      
+    
   )
+
 }

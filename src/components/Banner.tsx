@@ -1,10 +1,15 @@
-import { Text, Flex, Heading, Image, Stack } from "@chakra-ui/react";
+import { Text, Flex, Heading, Image, Stack, useBreakpointValue } from "@chakra-ui/react";
 
 export default function Banner() {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  })
+
   return(
     <Flex
       w="100%"  
-      h="400px"
+      h={['163px',"400px"]}
       bgImage="url('./images/banner-image.jpg')"
       bgPosition='100% 20%'
       bgRepeat="no-repeat"
@@ -16,24 +21,28 @@ export default function Banner() {
         w="1240px"
         align='center'
         justify='space-between'
-        px='10'>
-        <Stack w='50%' spacing='8'>
-          <Heading color='white.50'>
+        px={['5','10']}
+      >
+        <Stack w={{base: '100%', lg:'50%'}} spacing={['4','8']}>
+          <Heading color='white.50' fontSize={['xl','3xl']} fontWeight='medium'>
             5 Continentes, infinitas possibilidades
           </Heading>
           <Text
             color='white.500'
-            fontSize='xl'
+            fontSize={['md','xl']}
             fontWeight='light'
             >
             Chegou a hora de tirar do papel a viagem que você sempre sonhou. 
           </Text>
         </Stack>
-        <Image
-          w='417px'
-          mt='200px'
-          src='./images/airplane.png'
-        />
+        { isWideVersion &&
+          <Image
+            maxW='417px'
+            w={['200px','417px']}
+            mt='200px'
+            src='./images/airplane.png'
+          />
+        }
       </Flex>
     </Flex>
   )

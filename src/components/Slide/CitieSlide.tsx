@@ -30,12 +30,12 @@ export default function CitieSlide( { slug, image, title, subtitle, ...rest }: C
         >
           <Text
             color='white.50'
-            fontSize='4xl'
+            fontSize={['2xl','4xl']}
             fontWeight='bold'
           >{title}</Text>
           <Text
             color='white.50'
-            fontSize='xl'
+            fontSize={['md','xl']}
           >{subtitle}</Text>
         </Stack>
       </Flex>

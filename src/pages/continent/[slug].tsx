@@ -1,9 +1,10 @@
 import { GetStaticProps } from "next";
-import { AlertDescription, Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
-import BannerContinent from "../../components/BannerContinent";
+import { AlertDescription, Box, Flex, Heading, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
+import BannerContinent from "../../components/continent/BannerContinent";
 import Header from "../../components/Header";
 import TopCities from "../../components/TopCities/Index";
 import { createClient } from "../../services/prismicio";
+import Caracteristic from "../../components/continent/Caracteristic";
 
 interface ContinentProps{
   continent:{
@@ -24,6 +25,12 @@ interface ContinentProps{
 }
 
 export default function Continent({continent}: ContinentProps) {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  })
+
+  const tooltipText = '100 cidades mais visitadas do mundo'
 
   return(
     <Stack
@@ -39,40 +46,24 @@ export default function Continent({continent}: ContinentProps) {
         position='relative'
         px='10'
       >
-        <Flex py='16'>
-          <Text w='50%' lineHeight='36px' fontSize='lg' fontWeight='medium' textAlign='justify'>
+        <Stack spacing={{base:'10',lg: '40'}} pb='16' pt={['8','16']} direction={{base: 'column', md: 'row'}} align='center'>
+          <Text
+            w={{base: '100%', md: '50%'}}
+            lineHeight='36px'
+            fontSize={[ 'md','lg']}
+            fontWeight='medium'
+            textAlign='justify'>
             {continent.description}
           </Text>
 
-          <Box mx='16' />
+          {}
 
-          <Stack direction='row' w='50%' justify='space-between'>
-            <Stack justify='center' align='center'>
-              <Text
-                color='yellow.500'
-                fontWeight='bold'
-                fontSize="5xl"
-              >{continent.countriesAmount}</Text>
-              <Text fontWeight='bold'>países</Text>
-            </Stack>
-            <Stack justify='center' align='center'>
-              <Text
-                color='yellow.500'
-                fontWeight='bold'
-                fontSize="5xl"
-              >{continent.languagesAmount}</Text>
-              <Text fontWeight='bold'>línguas</Text>
-            </Stack>
-            <Stack justify='center' align='center'>
-              <Text
-                color='yellow.500'
-                fontWeight='bold'
-                fontSize="5xl"
-              >{continent.citiesAmount}</Text>
-              <Text fontWeight='bold'>cidades +100</Text>
-            </Stack>
+          <Stack direction='row' w={{base:'100%', sm: '80%', md: '50%'}} justify='space-between'>
+            <Caracteristic name='países' number={continent.countriesAmount}/>
+            <Caracteristic name='línguas' number={continent.languagesAmount}/>
+            <Caracteristic name='cidades +100' number={continent.citiesAmount} tooltip={tooltipText}/> 
           </Stack>
-        </Flex> 
+        </Stack> 
 
         <TopCities cities={continent.cities}/>
       </Stack>
@@ -105,8 +96,6 @@ export const getStaticProps: GetStaticProps = async ({ previewData, params }) =>
   
   const response = await client.getByUID('continent', slug)
 
-  // console.log(JSON.stringify(response,null,2))
-
   const continent = {
     slug: response.uid,
     title: response.data.title[0].text,
@@ -125,7 +114,6 @@ export const getStaticProps: GetStaticProps = async ({ previewData, params }) =>
     })
   }
 
-  console.log(continent)
 
 
   return {
