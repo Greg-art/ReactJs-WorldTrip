@@ -17,6 +17,7 @@
 
 ## 👨🏻‍💻 Funcionalidades desenvolvidas por mim
 * Integração com o Prismic CMS, onde todas as informações usadas no site são armazenadas/criadas.
+* Adicionado o uso do sistema estatico do Next.js, onde todas as rotas são pré-carregadas e salvas em cache.
 
 &nbsp;
 
