@@ -30,7 +30,7 @@
 
 &nbsp;
 
-<img src="https://user-images.githubusercontent.com/71772559/113538101-be095f00-95b0-11eb-8e5a-2eda2c5bd456.gif" width="100%" />
+<img src=" " width="100%" />
 
 &nbsp;
 
