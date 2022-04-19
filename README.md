@@ -17,6 +17,7 @@
 
 ## 👨🏻‍💻 Funcionalidades desenvolvidas por mim
 * Integração com o Prismic CMS, onde todas as informações usadas no site são armazenadas/criadas.
+* Adicionado o uso do sistema estatico do Next.js, onde todas as rotas são pré-carregadas e salvas em cache.
 
 &nbsp;
 
@@ -29,19 +30,20 @@
 
 &nbsp;
 
-<img src="https://user-images.githubusercontent.com/71772559/113538101-be095f00-95b0-11eb-8e5a-2eda2c5bd456.gif" width="100%" />
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/55760643/163897223-091bf8c4-16f0-48cf-b10f-134c125d96f6.gif)
+
 
 &nbsp;
 
 ## ⚙️ Instalação
 ```
 # Abra um terminal e copie este repositório com o comando
-$ git clone https://github.com/Greg-art/ReactJs-WorldTrip.git
+$ git clone https://github.com/Greg-art/WorldTrip.git
 ```
 
 ```
 # Acesse a pasta da aplicação
-$ cd ReactJs-WorldTrip
+$ cd WorldTrip
 
 # Crie um arquivo .env.local e coloque as variaveis
 # de ambiente baseado no arquivo .env.example que
