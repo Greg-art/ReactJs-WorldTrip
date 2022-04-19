@@ -4,6 +4,7 @@ import Banner from '../components/Banner'
 import Cards from '../components/Cards/Index'
 import Slide from '../components/Slide/Index'
 import { createClient } from '../services/prismicio'
+import Head from 'next/head'
 
 interface HomeProps{
   continents:{
@@ -20,6 +21,10 @@ export default function Home( { continents }: HomeProps ) {
 
   return (
     <Stack bg='white.50' w='100%' pb='40px' align='center' justify='center'>
+      <Head>
+        <title>WorldTrip | Home</title>
+      </Head>
+
       <Header />
       <Banner />
       <Cards />

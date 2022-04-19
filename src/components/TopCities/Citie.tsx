@@ -25,7 +25,8 @@ export default function Citie({ name, country, banner, flag}: CitieProps){
         src={banner}
         w='100%'
         h='173px' 
-        borderRadius='4px 4px 0px 0px'   
+        borderRadius='4px 4px 0px 0px' 
+        alt={name}
         
       />
       <Stack
@@ -46,6 +47,7 @@ export default function Citie({ name, country, banner, flag}: CitieProps){
           w='12'
           h='12'
           src={flag} 
+          alt={name}
           borderRadius='360px'
         />
       </Stack>

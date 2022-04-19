@@ -1,4 +1,4 @@
-import { Flex, Heading, Wrap, WrapItem, Stack, Text, Image, Box } from "@chakra-ui/react";
+import { Heading, Wrap, WrapItem } from "@chakra-ui/react";
 import Citie from "./Citie";
 
 interface TopCitiesProps{
@@ -17,7 +17,7 @@ export default function TopCities( { cities }: TopCitiesProps) {
       <Heading fontSize={{base:'2xl' ,lg: '3xl'}} pb={{lg:'10px'}}>Cidades +100</Heading>
       <Wrap justify='center'>
         {cities.map(citie => (   
-          <WrapItem pr={{base:'0px',sm:'12px',lg:'28px'}}>
+          <WrapItem key={citie.name} pr={{base:'0px',sm:'12px',lg:'28px'}}>
             <Citie 
               name={citie.name}
               country={citie.country}

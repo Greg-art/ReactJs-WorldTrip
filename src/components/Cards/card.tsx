@@ -14,7 +14,7 @@ export default function Card({ image, text }: CardProps){
   if(isWideVersion){
     return(
       <Stack spacing='8' justify='center' align='center'>
-        <Image src={image} w={['40px','85px']} h={['40px','85px']}/>  &&
+        <Image src={image} w={['40px','85px']} h={['40px','85px']} alt={text}/>  &&
         <Text fontSize={['md','lg']} fontWeight='bold' >{text}</Text>
       </Stack>    
     )

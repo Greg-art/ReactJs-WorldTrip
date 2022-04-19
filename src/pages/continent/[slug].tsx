@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import TopCities from "../../components/TopCities/Index";
 import { createClient } from "../../services/prismicio";
 import Caracteristic from "../../components/continent/Caracteristic";
+import Head from "next/head";
 
 interface ContinentProps{
   continent:{
@@ -39,6 +40,9 @@ export default function Continent({continent}: ContinentProps) {
       align='center'
       mb='100px'
     >
+      <Head>
+        <title>WorldTrip | {continent.title}</title>
+      </Head>
       <Header />
       <BannerContinent title={continent.title}/>
       <Stack
@@ -73,18 +77,23 @@ export default function Continent({continent}: ContinentProps) {
   
 
 
+export async function getStaticPaths({ previewData }){
 
+  const client = createClient({ previewData });
 
+  const response = await client.getAllByType("continent");
 
-export async function getStaticPaths(){
-
-  // const client = createClient();
-
-  // const pages = await client.getAllByType("page");
-
+  const paths = response.map( page => {
+      return { 
+        params: {
+          slug: page.uid,
+        } 
+      }
+    }
+  ) 
 
   return {
-    paths: [],
+    paths,
     fallback: 'blocking'
   }
 }

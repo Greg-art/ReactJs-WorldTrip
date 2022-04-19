@@ -20,6 +20,7 @@ export default function CitieSlide( { slug, image, title, subtitle, ...rest }: C
           src={image} 
           filter='auto'
           brightness='40%'
+          alt={title}
           {...rest}
         />
         <Stack

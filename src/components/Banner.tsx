@@ -40,7 +40,8 @@ export default function Banner() {
             maxW='417px'
             w={['200px','417px']}
             mt='200px'
-            src='./images/airplane.png'
+            src='./images\Airplane.png'
+            alt='avião'
           />
         }
       </Flex>
